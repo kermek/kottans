@@ -1,0 +1,38 @@
+body {
+  background-color: #F9F9F9;
+}
+
+h1 {
+  font: bold 2em Arial, sans-serif;
+}
+
+p:first-letter {
+  color: #808080;
+  font-weight: bold;
+  font-size: 2em;
+}
+
+a {
+  color: #FF0080;
+}
+
+nav a {
+  color: #408080;
+}
+
+a:hover {
+  background-color: #FFFF80
+}
+
+.faq {
+  background-color: #E8FAFD;
+  font-size: 1.2em;
+}
+
+h2~form::after {
+  content: url(break_dancing_cat.gif);
+}
+
+footer::before {
+  content: url(dancing_cat.gif);
+}
