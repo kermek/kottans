@@ -1,1 +1,60 @@
 @import "overrided-bootstrap";
+
+
+.navbar-brand {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin: auto;
+}
+
+button.navbar-toggle {
+  padding: 0;
+  width: 30px;
+  height: 30px;
+  font: bold 24px/30px sans-serif;
+  border: 0;
+}
+
+.container .nav {
+    margin: 0;
+    display: table;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+  .container .nav li {
+      display: table-cell;
+      width: 25%;
+      float: none;
+  }
+
+  .container .nav li a {
+    text-align: center;
+    border-left: 1px solid rgba(255, 255, 255, .75);
+    border-right: 1px solid rgba(0, 0, 0, .1);
+  }
+
+  .container .nav li:first-child a {
+      border-left: 0;
+  }
+
+  .container .nav li:last-child a {
+      border-right: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-fluid .row {
+    display: none;
+  }
+  .container .nav li {
+      width: 100%;
+  }
+}
+
+.container-fluid1 {
+  width: 768px;
+}
+
