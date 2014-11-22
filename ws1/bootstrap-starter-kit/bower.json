@@ -1,0 +1,22 @@
+{
+  "name": "bootstrap-starter-kit",
+  "version": "1.0.0",
+  "authors": [
+    "sudodoki <smd.deluzion@gmail.com>"
+  ],
+  "description": "Starter kit for bootstrap with some npm scripts on top",
+  "main": "public/index.html",
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "~3.3.0",
+    "fontawesome": "~4.2.0"
+  }
+}
