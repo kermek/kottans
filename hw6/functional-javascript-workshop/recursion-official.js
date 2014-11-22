@@ -1,6 +1,10 @@
-module.exports = function reduce(arr, fn, initial) {
-  return (function reduceOne(index, value) {
-    if (index > arr.length - 1) return value;
-    return reduceOne(index + 1, fn(value, arr[index], index, arr));
-  })(0, initial);
+module.exports = function getDependencies(mod, result) {
+  result = result || [];
+  var dependencies = mod.dependencies || [];
+    Object.keys(dependencies).forEach(function(dep) {
+      var key = dep + '@' + mod.dependencies[dep].version;
+      if (result.indexOf(key) === -1) result.push(key);
+      getDependencies(mod.dependencies[dep], result);
+    });
+  return result.sort();
 }
