@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+#ChartArea {
+  background-color: #ddd;
+  width: 690px;
+  height: 300px;
+  margin: 0 auto;
+}
+ 
+.arrow {
+  display: block;
+  height: 100%;
+  float: left;
+  width: 20px;
+  text-align: center;
+  line-height: 300px;
+}
+.arrow.right {
+  float: right;
+}
+ 
+.bar {
+  display: inline-block;
+  width: 60px;
+  height: 150px; /* Gets overriden by D3-assigned height below */
+  margin-right: 5px;
+  fill: #face3d;
+}
+
+.special {
+  stroke: green;
+}
+
+.axis path,
+.axis line {
+fill: none;
+stroke: black;
+shape-rendering: crispEdges;
+}
+.axis text {
+font-family: sans-serif;
+font-size: 11px;
+}
