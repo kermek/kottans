@@ -1,0 +1,20 @@
+{
+  "name": "kermek_ws_npm",
+  "version": "0.0.0",
+  "description": "My nice module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "math",
+    "add",
+    "sub",
+    "multiply",
+    "divide",
+    "test"
+  ],
+  "author": "Yermek Kadyrbayev <kek277@gmail.com>",
+  "license": "ISC",
+  "dependencies": {}
+}
