@@ -52,12 +52,12 @@
       <div class="row">
         <div class="column small-offset-1 small-10 large-offset-2 large-8">
           <h1>Signup</h1>
-          <form method="post" action="http://localhost:8888/signup" class="small-8">
-            <input class="error" name="login" type="text" placeholder="enter your login">
+          <form id="form-signup" method="post" action="#" class="small-8">
+            <input id="form-signup-name" class="error" name="login" type="text" placeholder="enter your login">
             <small class="error">Something went wrong!</small>
-            <input name="email" type="email" placeholder="enter your email">
-            <input name="password" type="password" placeholder="enter your new password">
-            <input name="passwordConfirmation" type="password" placeholder="retype it">
+            <input id="form-signup-email" name="email" type="email" placeholder="enter your email">
+            <input id="form-signup-password" name="password" type="password" placeholder="enter your new password">
+            <input id="form-signup-passwordConfirmation" name="passwordConfirmation" type="password" placeholder="retype it">
             <input type="submit" value="Let me in!" class="button">
             <a href="/login" class="button secondary">Nah, I do have an account already.</a>
           </form>
@@ -104,9 +104,11 @@
     <script src="./bower_components/handlebars/handlebars.js"></script>
     <script src="./scripts/component.js"></script>
     <script src="./scripts/ajaxList.js"></script>
+    <script src="./scripts/ajaxSignUp.js"></script>
     <script>
+      var s1 = new ajaxSignUp("#form-signup");
       var l1 = new ajaxList("#list");
-      l1.show();
+      l1.showList();
    </script>
   </body>
 </html>

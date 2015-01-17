@@ -1,17 +1,24 @@
-function ajaxList(sSelector){
+function ajaxSignUp(sSelector){
   var c = this;
 
   c.init(sSelector);
-  c.template = c.find('#list-template');
-  c.elements = c.find('#list-elements');
-
-  c.showList = function(){
+  c.name                 = c.find('#form-signup-name');
+  c.email                = c.find('#form-signup-email');
+  c.password             = c.find('#form-signup-password');
+  c.passwordConfirmation = c.find('#form-signup-passwordConfirmation');
+  
+  c.submitSignUpForm = function(event){
+    event.preventDefault();
     $.ajax({
-       'url'         : 'http://api.sudodoki.name:8888/users?t=' + new Date().getTime()
+       'url'         : 'http://api.sudodoki.name:8888/signup?t=' + new Date().getTime()
       ,'crossDomain' : true
-      ,'method'      : 'GET'
+      ,'method'      : 'POST'
       ,'dataType'    : 'json'
-      ,'data'        : ''
+      ,'data'        : {
+         login               : c.name.val()
+        ,password            : c.password.val()
+        ,passwordConfirmation: c.passwordConfirmation.val()
+      }
       ,'success'     : function(oServerResponse){}
       ,'error'       : function(oAjax){
         if (oAjax.status == 404){
@@ -28,9 +35,7 @@ function ajaxList(sSelector){
         var oServerResponse = oAjax.responseJSON;
         if (oAjax.status == 200){
           if (oServerResponse != undefined){
-            var source = c.template.html();
-            var template = Handlebars.compile(source);
-            c.elements.empty().append(template(oServerResponse));
+            c.token = oServerResponse.token;
           }
           else {
             alert('The server has returned an incorrect '
@@ -41,6 +46,8 @@ function ajaxList(sSelector){
       }
     });
   }
+
+  c.elem.bind('submit', c.submitSignUpForm);
 }
 
-ajaxList.prototype = new component();
+ajaxSignUp.prototype = new component();
