@@ -37,12 +37,12 @@
         <div class="row">
           <div class="column small-offset-1 small-10 large-offset-2 large-8">
             <h1>Login</h1>
-            <form method="post" action="http://localhost:8888/login" class="small-8">
-              <input class="error" name="login" type="text" placeholder="enter your login">
+            <form id="form-login" method="post" action="#" class="small-8">
+              <input id="form-login-name" class="error" name="login" type="text" placeholder="enter your login">
               <small class="error">Something went wrong!</small>
-              <input name="password" type="password" placeholder="enter your password">
+              <input id="form-login-password" name="password" type="password" placeholder="enter your password">
               <input type="submit" value="Log me in" class="button">
-              <a href="/signup" class="button secondary">Sign me up</a>
+              <a href="#signup" class="button secondary">Sign me up</a>
             </form>
           </div>
         </div>
@@ -59,7 +59,7 @@
             <input id="form-signup-password" name="password" type="password" placeholder="enter your new password">
             <input id="form-signup-passwordConfirmation" name="passwordConfirmation" type="password" placeholder="retype it">
             <input type="submit" value="Let me in!" class="button">
-            <a href="/login" class="button secondary">Nah, I do have an account already.</a>
+            <a href="#login" class="button secondary">Nah, I do have an account already.</a>
           </form>
         </div>
       </div>
@@ -103,12 +103,14 @@
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
     <script src="./bower_components/handlebars/handlebars.js"></script>
     <script src="./scripts/component.js"></script>
-    <script src="./scripts/ajaxList.js"></script>
+    <script src="./scripts/ajaxLogIn.js"></script>
     <script src="./scripts/ajaxSignUp.js"></script>
+    <script src="./scripts/ajaxList.js"></script>
     <script>
-      var s1 = new ajaxSignUp("#form-signup");
-      var l1 = new ajaxList("#list");
-      l1.showList();
+      var lg1 = new ajaxLogIn("#form-login");
+      var su1 = new ajaxSignUp("#form-signup");
+      var li1 = new ajaxList("#list");
+      li1.showList();
    </script>
   </body>
 </html>
