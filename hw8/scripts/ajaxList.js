@@ -1,7 +1,9 @@
 function ajaxList(sSelector){
   var l = this;
 
-  l.elem = $(sSelector);
+  l.init(sSelector);
+  l.template = l.find('#list-template');
+  l.elements = l.find('#list-elements');
 
   l.show = function(){
     $.ajax({
@@ -26,11 +28,9 @@ function ajaxList(sSelector){
         var oServerResponse = oAjax.responseJSON;
         if (oAjax.status == 200){
           if (oServerResponse != undefined){
-            oServerResponse.forEach(function(val){
-              var source = l.elem.html();
-              var template = Handlebars.compile(source);
-              l.elem.append(template(val));
-            });
+            var source = l.template.html();
+            var template = Handlebars.compile(source);
+            l.elements.empty().append(template(oServerResponse));
           }
           else {
             alert('The server has returned an incorrect '

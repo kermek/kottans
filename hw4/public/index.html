@@ -7,7 +7,7 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
   <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 </head>
-<body>
+<body onload="window.resizeTo(800, 600)">
   <div class="navbar navbar-default navbar-static-top">
     <div class="container-fluid">
       <div class="row">
@@ -39,9 +39,161 @@
       </div>
     </div>
   </div>
-  <div id="container">
-    <h1><a href="all-elements.html">Kitchen sink</a></h1>
-    <h1><a href="icons.html">Icons list</a></h1>
+  <div id="container" class="container">
+    <section id="home">
+      <img src="http://fakeimg.pl/189x116/00CED1/FFF/?text=img+placeholder"class="textWrapLeft">
+      <p>
+        Первостепенный текст Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+      </p>
+      <p>
+        Второстепенный текст, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+      </p>
+      <img src="http://fakeimg.pl/189x116/00CED1/FFF/?text=img+placeholder"class="textWrapRight">
+      <p>
+        Третий сорт, забиваем полосу Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit
+      </p>
+    </section>
+    <section id="faq">
+      <h2>FAQ</h2>
+      <dl>
+        <dt>Question 1</dt>
+        <dd>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam. Pellentesque rhoncus aliquam mattis. Ut vulputate eros sed felis sodales nec vulputate justo hendrerit. Vivamus varius pretium ligula, a aliquam odio euismod sit amet. Quisque laoreet sem sit amet orci ullamcorper at ultricies metus viverra. Pellentesque arcu mauris, malesuada quis ornare accumsan, blandit sed diam.
+        </dd>
+        <dt>Question 2</dt>
+        <dd>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis vulputate commodo lectus, ac blandit elit tincidunt id. Sed rhoncus, tortor sed eleifend tristique, tortor mauris molestie elit, et lacinia ipsum quam nec dui. Quisque nec mauris sit amet elit iaculis pretium sit amet quis magna. Aenean velit odio, elementum in tempus ut, vehicula eu diam.
+        </dd>
+      </dl>
+    </section>
+    <section id="contacts">
+      <h2>Contacts</h2>
+      <div class="row">
+        <div class="col-xs-4">
+          <iframe id="map"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDZeI5pvmLPO4i488XO4o_6pAj1wH5uBnU
+              &q=Cogniance,+вул.+Казимира+Малевича,+86O,+Київ,+місто+Київ,+02000">
+          </iframe>
+        </div>
+        <div class="col-xs-8">
+          <div class="row contacts">
+            <div class="col-xs-1">
+              <i class="fa fa-map-marker fa-2x"></i>
+            </div>
+            <div class="col-xs-2">
+              address:
+            </div>
+            <div class="col-xs-9">
+              <address>
+                <strong>KOTTANS.ORG</strong><br>
+                86 BOGENKA ST<br>
+                KYIV 07400<br>
+                UKRAINE<br>
+              </address>
+            </div>
+          </div>
+          <div class="row contacts">
+            <div class="col-xs-1">
+              <i class="fa fa-envelope-o fa-2x"></i>
+            </div>
+            <div class="col-xs-2">email</div>
+            <div class="col-xs-9">
+              <a href="mailto:smd.deluzion@gmail.com">smd.deluzion@gmail.com</a>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-1">
+              <i class="fa fa-phone fa-2x"></i>
+            </div>
+            <div class="col-xs-2">phone</div>
+            <div class="col-xs-9">
+              <a href="tel:5555555">555-55-55</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="stay">
+      <h2>Stay in touch</h2>
+        <form id="registration" action="#" method="post" class="form-horizontal" role="form">
+            <div class="form-group">
+              <label for="user-name" class="col-xs-offset-3 col-xs-2 control-label">Name:</label>
+              <div class="col-xs-3">
+                <input type="text" id="user-name" class="form-control" placeholder="Your name here" required autofocus>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="user-email" class="col-xs-offset-3 col-xs-2 control-label">Email:</label>
+              <div class="col-xs-3">
+                <input type="email" id="user-email" class="form-control" placeholder="name@domain.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-offset-5 col-xs-3">
+                <div class="checkbox">
+                  <label for="user-spam-confirm">
+                    <input type="checkbox" name="spam" value="confirm" id="user-spam-confirm" required>
+                    I agree to get spam
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-offset-5 col-xs-3">
+                <input name="Submt" type="submit" value="Submit" class="btn btn-default">
+              </div>
+            </div>
+        </form>
+    </section>
+    <div class="footer">
+      <div class="row">
+        <div class="footer-left">
+          <div class="col-xs-6">
+              <ul class="nav navbar-inverse">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+                <li><a href="#stay">Stay in touch</a></li>
+              </ul>
+          </div>
+         </div>
+        <div class="footer-right">
+          <div class="col-xs-6">
+            <div class="row">
+              <div class="col-xs-12">
+                <i class="fa fa-mail-forward"></i> Let us hear your feedback
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-5 small">
+                How likely will you advise us?
+              </div>
+              <div class="col-xs-7">
+                <form action="#" method="post"class="form-inline" role="form">
+                  <label for="minusminus" class="radio-inline">
+                    <input type="radio" name="vote" id="minusminus" value="0">--
+                  </label>
+                  <label for="minusplus" class="radio-inline">
+                    <input type="radio" name="vote" id="minusplus" value="1">-+
+                  </label>
+                  <label for="plusminus" class="radio-inline">
+                    <input type="radio" name="vote" id="plusminus" value="2">+-
+                  </label>
+                  <label for="plusplus" class="radio-inline">
+                    <input type="radio" name="vote" id="plusplus" value="3">++
+                  </label>
+                  <button type="submit" class="btn btn-xs">Vote</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        &copy; Copyright 2013 - sudodoki
+      </div>
+    </div>
+    </footer>
   </div>
 </body>
 </html>

@@ -12,8 +12,8 @@
   <meta name="author" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/foundation.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="foundation.css">
 </head>
   <body>
   
@@ -66,25 +66,28 @@
     </div>
     <hr>
     <div id="list">
-      <script id="list-template" type="x-handlebars-template">
-        {{#each this}}
-          <li>
-            <div class="person {{user.gender}}">
-              <a class='url n' href="#show-full">
-                <i>{{user.name.title}}</i>
-                {{user.name.last}}, {{user.name.first}}
-              </a>
-            </div>
-          </li>
-        {{/each}}
-      </script>
-      <ul id="list-elements" class="small-block-grid-3">
+      <ul class="small-block-grid-3">
+      <li>
+        <div class="person male">
+          <a class='url n' href="#show-full"><i>Mr.</i> Know-it-all, I</a>
+        </div>
+      </li>
+      <li>
+        <div class="person female">
+          <a class='url n' href="#show-full"><i>Mrs.</i> Did-it, Been-there</a>
+        </div>
+      </li>
+      <li>
+        <div class="person male">
+          <a class='url n' href="#show-full"><i>Mr.</i> Real Fun.</a>
+        </div>
+      </li>
       </ul>
     </div>
     <hr>
     <div id="show-full">
       <div>
-      <img src="./images/ajax-loader.gif" alt="AJAX loader animation">
+      <img src="ajax-loader.gif" alt="AJAX loader animation">
       <h2>Mr. Know-it-all, I</h2>
       <section>
         <h3>Location</h3>
@@ -100,14 +103,7 @@
       </div>
     </div>
     <!--[if lt IE 7]><script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script><script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script><![endif]-->
-    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="./bower_components/handlebars/handlebars.js"></script>
-    <script src="./scripts/component.js"></script>
-    <script src="./scripts/ajaxList.js"></script>
-    <script>
-      var l1 = new ajaxList("#list");
-      l1.show();
-   </script>
+   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   </body>
 </html>
 
